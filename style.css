@@ -1,0 +1,241 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Banner styles */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: url("https://cdn.mos.cms.futurecdn.net/eToSsNm65xFUUJSLsz6Lm4.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 95%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 170px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fcf9f9;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f5f3f5;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #1476ef;
+    background: #ddd0d014;
+    color: #e8e8e8;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #5b00fc85;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+.rgb::after {
+    content: "";
+    background: linear-gradient(45deg,
+    #ff0000 0%,
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%,
+    #3fdad8 40%,
+    #2fc9e2 50%,
+    #1c7fee 60%,
+    #5f15f2 70%,
+    #ba0cf8 80%,
+    #fb07d9 90%,
+    #ff0000 100% )
+    repeat 0% 0% / 300% 100%;
+    position: absolute;
+    inset: -3px;
+    animation: rgb 6s linear infinite;
+    border-radius: 16px;
+    filter: blur(3px);
+    transform: translateZ(-1px);
+}
+
+@keyframes rgb {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card-stats {
+    grid-area: stats;
+}
+
+.card-image {
+    grid-area: image;
+    background: url("logo.png");
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+}
+
+.card-image {
+    grid-area: image;
+}
+
+.js-tilt-glare {
+    border-radius: 0px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 170px;
+    grid-template-rows: auto;
+    background-color: #1d1d1d;
+    color: white;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    font-family: roboto;
+    text-align: justify;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #444;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin: 0 15px;
+    }
+
+    .content h1 {
+        font-size: 80px;
+    }
+
+    .content p {
+        width: 50%;
+        margin: 20px auto;
+    }
+}
