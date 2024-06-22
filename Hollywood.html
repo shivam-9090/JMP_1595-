@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Page</title>
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <header>
+        <h1>Movies Collection</h1>
+		<div class="header-container">
+            <br>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for movies...">
+                <button type="submit" onclick="searchMovies()">Search</button>
+            </div>
+        </div><br>
+		<div class="logo">
+            <img src="logo.png" alt="Website Logo">
+        </div>
+        <button id="toggle-button" onclick="toggleMode()">Toggle Dark Mode</button>
+    </header>
+    <main>
+		<div id="movies-list">
+            
+            <!-- Add more movies here -->
+        </div>
+        <section class="movies">
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-interstellar-2014-hindi-dubbed-org-dd-5-1-480p-720p-1080p-2160p-imax-bluray/">
+                    <img src="movie1.jpg" alt="Interstellar">
+                    <h2>Interstellar</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://youtu.be/kQDd1AhGIHk?si=6a-W5ANUZSi9fRrV">
+                    <img src="movie2.jpg" alt="Movie 2">
+                    <h2>Kalki Tralier</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-pushpa-the-rise-part-1-2021-multi-audios-480p-720p-1080p-4k/">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/pushpa--the-rise-et00129542-08-12-2021-01-22-08.jpg" alt="Movie 3">
+                    <h2>Pushpa The Rise</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://luxmovies.vip/download-k-g-f-2-2022-hindi-org-dd-5-1-480p-720p-1080p-2160p-uhd">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d0/K.G.F_Chapter_2.jpg" alt="kg">
+                    <h2>KGF Chapter-2</h2>
+                </a>
+            </article>
+			
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-rrr-rise-roar-revolt-2022-hindi-netflix-movie-480p-720p-1080p-1440p-2160p-4k/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOGEzYzcxYjAtZmZiNi00YzI0LWIyY2YtOTM0MDFjODU2YTZiXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg" alt="Movie 2">
+                    <h2>RRR</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-salaar-part-1-2023-hindi-movie-480p-720p-1080p-2160p-4k-web-dl/">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Salaar_Part_1_%E2%80%93_Ceasefire.jpg" alt="Movie 3">
+                    <h2>Salaar</h2>
+                </a>
+				</article>
+				<article class="movie">
+                <a href="https://luxmovies.vip/download-hanu-man-2024-hindi-movie-480p-720p-1080p-2160p/">
+                    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/hanu-man-et00311673-1704954533.jpg" alt="Movie 1">
+                    <h2>Hanuman</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-3-ekka-2023-gujarati-full-movie-480p-720p-1080p/">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/03/3_Ekka_Poster.jpg" alt="Movie 2">
+                    <h2>3 ekka</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-lagan-special-2024-gujarati-full-movie-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDBlZjJkZmEtZTczMy00MjU2LWJmZGEtMDhjNjhjODBhYWM5XkEyXkFqcGdeQXVyODY2MTUxMDA@._V1_.jpg" alt="Movie 3">
+                    <h2>Lagan Special</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://luxmovies.vip/download-animal-2023-hindi-full-movie-nf-web-dl-480p-720p-1080p-2160p-4k/">
+                    <img src="https://m.media-amazon.com/images/I/61OmlO9stnL._AC_UF1000,1000_QL80_.jpg" alt="Movie 1">
+                    <h2>Animal</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-jawan-2023-hindi-org-dd5-1-480p-720p-1080p-web-dl/">
+                    <img src="https://assets.gadgets360cdn.com/pricee/assets/product/202206/Jawan-poster_1655912386.jpg" alt="Movie 2">
+                    <h2>Jawan</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-brahmastra-part-one-shiva-2022-hindi-full-movie-web-dl-480p-720p-1080p-2160p-4k-hd/">
+                    <img src="https://m.media-amazon.com/images/I/71FlIOW3lCL._AC_UF1000,1000_QL80_.jpg" alt="Movie 3">
+                    <h2>Brahmastra</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://luxmovies.vip/download-leo-2023-hindi-dubbed-org-480p-720p-1080p-2160p-4k/">
+                    <img src="https://static.moviecrow.com/gallery/20230921/221109-Leo%20Vijay%20Sanjay%20Dutt%20Poster.jpg" alt="Movie 1">
+                    <h2>Leo</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-kantara-a-legend-2022-org-hindi-movie-480p-720p-1080p-2160p-4k/">
+                    <img src="https://media5.bollywoodhungama.in/wp-content/uploads/2022/10/Kantara.jpeg" alt="Movie 2">
+                    <h2>Kantara</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-12th-fail-2023-hindi-full-movie-480p-720p-1080p-2160p-4k/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDI4OTM1ZjMtOWQxMC00OTY5LTg3NjQtMjlhMWVjODFlYTY4XkEyXkFqcGdeQXVyMTYzMTU3Njgx._V1_.jpg" alt="Movie 3">
+                    <h2>12th Fail</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://luxmovies.vip/download-jailer-2023-hindi-org-dubbed-full-movie-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDA5YzlhNjItMDgxNC00MjQ4LWIzMDMtYTUyMzBhNjViNDk3XkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_.jpg" alt="Movie 1">
+                    <h2>Jailer</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-vikram-2022-hindi-and-multi-audio-full-movie-web-dl-480p-720p-1080p/">
+                    <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2021/07/10/273e787ba809e725948334340c658e68_original.jpg" alt="Movie 2">
+                    <h2>Vikram</h2>
+                </a>
+            </article>
+			<article class="movie">
+			    <a href="https://luxmovies.vip/download-kaithi-2019-hindi-dubbed-480p-720p-1080p/">
+				<img src="https://m.media-amazon.com/images/M/MV5BZjQyNThhMjQtZDgzNC00N2U4LWFhNjMtNWVlMzIxNWIxNTUwXkEyXkFqcGdeQXVyMTYyNjAzOTUx._V1_.jpg" class="movie">
+				<h2>Kaithi</h2>
+				</a>
+				</article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-bhool-bhulaiyaa-2-2022-hindi-movie-web-dl-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWY5MWEyNzYtYjI2ZS00OWU5LWIxOTUtNjViYTVhY2YzYTc0XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="Movie 3">
+                    <h2>Bhool bhulaiyaa 2</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://luxmovies.vip/download-crew-2024-hindi-full-movie-web-dl-480p-720p-1080p-2160p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMGNhNTYwNjMtYjFkOC00MWQzLTgyNTMtMmIxNWU2MWUyMDQ5XkEyXkFqcGdeQXVyMTUzNTgzNzM0._V1_FMjpg_UX1000_.jpg" alt="Movie 1">
+                    <h2>Crew</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-pathaan-2023-hindi-full-movie-web-dl-480p-720p-1080p-2160p-4k/">
+                    <img src="https://bollywoodmovieposters.com/wp-content/uploads/2023/01/pathan-poster-shahrukh-khan-movie-srk.jpg" alt="Movie 2">
+                    <h2>Pathaan</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-bade-miyan-chote-miyan-2024-hindi-movie-480p-720p-1080p/">
+                    <img src="https://www.cinejosh.com/newsimg/newsmainimg/first-look-poster-of-bade-miyan-chote-miyan-out_b_2001241210.jpg" alt="Movie 3">
+                    <h2>BMCM</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://luxmovies.vip/download-dunki-2023-hindi-movie-480p-720p-1080p-2160p-4k/">
+                    <img src="https://m.media-amazon.com/images/I/91zOCNs+x-L.jpg" alt="Movie 1">
+                    <h2>Dunki</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://luxmovies.vip/download-teri-baaton-mein-aisa-uljha-jiya-2024-hindi-movie-480p-720p-1080p-2160p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYWExMzM3MjgtNDA4NC00MmNiLWI1MDQtMGI0MmZiYzc1ZWE1XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_FMjpg_UX1000_.jpg" alt="Movie 2">
+                    <h2>Teri Baaton mein aisa uljha jiya</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-marvel-cinematic-universe-2008-2021-imax-web-dl-dual-audio-hindi-720p-1080p-2160p/">
+                    <img src="https://m.media-amazon.com/images/I/91j3gFBGBxL.jpg" alt="Movie 3">
+                    <h2>Marvel Cinematic</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://vegamovies3.com/john-wick-2014-dual-audio-hindi-480p-720p-1080p/">
+                    <img src="https://image.tmdb.org/t/p/original/5w2pb3dxENKRl8VA7ADUTZ1cEOz.jpg" alt="Movie 1">
+                    <h2>John Wick </h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-john-wick-chapter-2-2017-dual-audio-hindi-bluray-480p-720p-1080p-2160p-4k/">
+                    <img src="https://i.pinimg.com/originals/61/8e/44/618e4481183d9d09e7d5d812fad60ee0.jpg" alt="Movie 2">
+                    <h2>John Wick 2</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-parabellum-chapter-3-dual-audio-hindi-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg" alt="Movie 3">
+                    <h2>John Wick 3</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://vegamovies3.com/download-john-wick-chapter-4-2023-hindi-org-dubbed-bluray-480p-720p-1080p-2160p-4k/">
+                    <img src="https://image.tmdb.org/t/p/original/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg">
+                    <h2>John Wick 4</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-pirates-of-the-caribbean-all-movies-collection-dual-audio-hindi-org-dubbed-480p-720p-1080p-bluray/">
+                    <img src="https://i.pinimg.com/564x/2e/f1/02/2ef1022af322d88be53d5470f047f6be.jpg" alt="Movie 2">
+                    <h2>Pirets of the caribbean Collaction</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-harry-potter-movies-collection-480p-720p-1080p/">
+                    <img src="https://images-cdn.ubuy.co.in/6354e0b53ffc945ac355c204-harry-potter-and-the-deathly-hallows.jpg" alt="Movie 3">
+                    <h2>Harry potter Collaction</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://vegamovies3.com/download-godzilla-x-kong-the-new-empire-2024-hindi-org-480p-720p-1080p-2160p-4k/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BY2QwOGE2NGQtMWQwNi00M2IzLThlNWItYWMzNGQ5YWNiZDA4XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_.jpg" alt="Movie 1">
+                    <h2>Godzilla x kong</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-godzilla-vs-kong-2021-dual-audio-hindi-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzk2ZmYxNTUtODlhMi00NzE2LTkwMTctYjg0ODQ1ZjkyNzJmXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" alt="Movie 2">
+                    <h2>Godzilla vs kong</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-avatar-2009-extended-imax-dual-audio-hindi-bluray-480p-720p-1080p-1440p-2160p/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg" alt="Movie 3">
+                    <h2>Avatar</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://vegamovies3.com/download-avatar-the-way-of-water-2022-bluray-hindi-org-dd-5-1-480p-720p-1080p-2160p-4k/">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX1000_.jpg" alt="Movie 1">
+                    <h2>Avatar the way of the water</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-black-adam-2022-hindi-dubbed-org-dd5-1-blu-ray-480p-720p-1080p-2160p-4k/">
+                    <img src="https://image.tmdb.org/t/p/original/17OfTgQTlAUx0O18tqJOPz89HuU.jpg" alt="Movie 2">
+                    <h2>Black adam</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-zack-snyders-justice-league-2021-dual-audio-hindi-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/I/51CDY4ATTLS._AC_UF894,1000_QL80_.jpg" alt="Movie 3">
+                    <h2>Zack snyder's justice league</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://unilinks.lol/thcmvj000215986/?token=MjRqaStKZyt4L0M2dWVWSHljVEFYbk1lYXB4ZGJxTDg0VitUMnZCekZ1MHVxclpNamE3UGhHdWlRSVBEdVFZMDZwQVVweEtKUllkbmcvWUJsQ280Z01lSjRMZHFrbWJzUEZMaTdHSytjYXFKUGU0VG1EM3JGZThZeTYxZEcxWC9JRkRSVmRtT1hCQjZMQVI5cWhsWllyQ1k4ZjBpbG1QTCt6WGp5NXRUZ3pzaTNBYmkrTTZoUWtvdjZ1Y0JZLzlHNTNDQlR2bllwdDZOWTBXUlpRaVJJUE53anJjRWpWNmFHL0lpOTRReERuV2lGK0ZRM1dUL05GeDhwWmhWbzNQbjJUM3NNQUdjN3ZYMmZ5Ymw2VUpEbm0rRkIyY1Nob2lud1lWRndZRG1DelVYWmJkVTRxT1UyQlQzTlBBNU1jZ3llWm5FV2wwTXgrQjg1MTBQOTc0YTNNWTZPNzB1N3lGR2VVdzFkWXFQNE9FPQ==">
+                    <img src="https://m.media-amazon.com/images/I/41BBOfduF2L._AC_UF894,1000_QL80_.jpg" alt="Movie 1">
+                    <h2>Batman vs Superman</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://unilinks.lol/thcmvj000215981/?token=MjRqaStKZyt4L0M2dWVWSHljVEFYbk1lYXB4ZGJxTDg0VitUMnZCekZ1MHVxclpNamE3UGhHdWlRSVBEdVFZMDZwQVVweEtKUllkbmcvWUJsQ280Z01lSjRMZHFrbWJzUEZMaTdHSytjYXFKUGU0VG1EM3JGZThZeTYxZEcxWC9JRkRSVmRtT1hCQjZMQVI5cWhsWllyQ1k4ZjBpbG1QTCt6WGp5NXRUZ3pzaTNBYmkrTTZoUWtvdjZ1Y0JZLzlHNTNDQlR2bllwdDZOWTBXUlpRaVJJUE53anJjRWpWNmFHL0lpOTRReERuV2lGK0ZRM1dUL05GeDhwWmhWbzNQbjJUM3NNQUdjN3ZYMmZ5Ymw2VUpEbm0rRkIyY1Nob2lud1lWRndZRG1DelZJNWJWWnVpcHkxaklsU3RESm13d2pGdE04dEpkYVA5VHQzcFM5YkpoTzdnUzZDaXlTeUFFYnNQb1ZsV1QwOFhBPQ==">
+                    <img src="https://image.tmdb.org/t/p/original/7rIPjn5TUK04O25ZkMyHrGNPgLx.jpg" alt="Movie 2">
+                    <h2>Man of steel</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://unilinks.lol/thcmvj000215994/?token=MjRqaStKZyt4L0M2dWVWSHljVEFYbk1lYXB4ZGJxTDg0VitUMnZCekZ1MHVxclpNamE3UGhHdWlRSVBEdVFZMDZwQVVweEtKUllkbmcvWUJsQ280Z01lSjRMZHFrbWJzUEZMaTdHSytjYXFKUGU0VG1EM3JGZThZeTYxZEcxWC9JRkRSVmRtT1hCQjZMQVI5cWhsWllyQ1k4ZjBpbG1QTCt6WGp5NXRUZ3pzaTNBYmkrTTZoUWtvdjZ1Y0JZLzlHNTNDQlR2bllwdDZOWTBXUlpRaVJJUE53anJjRWpWNmFHL0lpOTRReERuV2lGK0ZRM1dUL05GeDhwWmhWbzNQbjJUM3NNQUdjN3ZYMmZ5Ymw2VUpEbm0rRkIyY1Nob2lud1lWRndZRG1DelZvbllKdTAySmZvdVpzS2RkSGF3SW9JNnZneGNQZmQ5d2hiZUU1SC9LTXZhd2hVNnFxMStZdUFqRyszS3Y4RitrPQ==">
+                    <img src="https://m.media-amazon.com/images/I/51qzxjAjetL._AC_UF1000,1000_QL80_.jpg" alt="Movie 3">
+                    <h2>Wonder woman</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://unilinks.lol/thcmvj000170361/?token=MjRqaStKZyt4L0M2dWVWSHljVEFYbk1lYXB4ZGJxTDg0VitUMnZCekZ1MHVxclpNamE3UGhHdWlRSVBEdVFZMDZwQVVweEtKUllkbmcvWUJsQ280Z01lSjRMZHFrbWJzUEZMaTdHSytjYXFKUGU0VG1EM3JGZThZeTYxZEcxWC9JRkRSVmRtT1hCQjZMQVI5cWhsWllyQ1k4ZjBpbG1QTCt6WGp5NXRUZ3pzaTNBYmkrTTZoUWtvdjZ1Y0JZLzlHNTNDQlR2bllwdDZOWTBXUlpRaVJJUE53anJjRWpWNmFHL0lpOTRReERuV2lGK0ZRM1dUL05GeDhwWmhWbzNQbjJUM3NNQUdjN3ZYMmZ5Ymw2VUpEbm0rRkIyY1Nob2lud1lWRndZRG1DelUzV1hSSXEvNy85MnVaVndHbUkvVC9UYm9YT1NreEZOY3NiMVpjZ1N6MG0zMWRPYWhLNmRvUC9ySnZpRW45b2NzPQ==">
+                    <img src="https://m.media-amazon.com/images/I/81hZr5NJqkL.jpg" alt="Movie 1">
+                    <h2>Aquaman</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://unilinks.lol/thcmvj000216000/?token=MjRqaStKZyt4L0M2dWVWSHljVEFYbk1lYXB4ZGJxTDg0VitUMnZCekZ1MHVxclpNamE3UGhHdWlRSVBEdVFZMDZwQVVweEtKUllkbmcvWUJsQ280Z01lSjRMZHFrbWJzUEZMaTdHSytjYXFKUGU0VG1EM3JGZThZeTYxZEcxWC9JRkRSVmRtT1hCQjZMQVI5cWhsWllyQ1k4ZjBpbG1QTCt6WGp5NXRUZ3pzaTNBYmkrTTZoUWtvdjZ1Y0JZLzlHNTNDQlR2bllwdDZOWTBXUlpRaVJJUE53anJjRWpWNmFHL0lpOTRReERuV2lGK0ZRM1dUL05GeDhwWmhWbzNQbjJUM3NNQUdjN3ZYMmZ5Ymw2VUpEbm0rRkIyY1Nob2lud1lWRndZRG1DeldEY1JUU1VWaG11S3NROTFHZTJOLzNqVEFUemlnU1N2K3pvdTFtUCtUT0o5dmhnd0Z5aStmMXVodGpkSUlKWmlvPQ==">
+                   <img src="https://m.media-amazon.com/images/I/71uCEUn7zOL.jpg" alt="Movie 2">
+                    <h2>shazam</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-shazam-fury-of-the-gods-2023-hindi-5-1-org-480p-720p-1080p-2160p/">
+                    <img src="https://m.media-amazon.com/images/I/815UA0P6eQL._AC_UF1000,1000_QL80_.jpg" alt="Movie 3">
+                    <h2>Shazam fury of god</h2>
+                </a>
+            </article>
+			<article class="movie">
+                <a href="https://vegamovies3.com/download-rise-of-the-planet-of-the-apes-2011-dual-audio-hindi-english-movie-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/I/51fcwyusn2L._AC_UF894,1000_QL80_.jpg" alt="Movie 1">
+                    <h2>Rise of the planet of the apes</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-kong-skull-island-2017-dual-audio-hindi-english-movie-480p-720p-1080p/">
+                    <img src="https://w0.peakpx.com/wallpaper/430/758/HD-wallpaper-kong-skull-island-2017-kong-movie-poster-skull-island.jpg" alt="Movie 2">
+                    <h2>Kong: skull land</h2>
+                </a>
+            </article>
+            <article class="movie">
+                <a href="https://vegamovies3.com/download-venom-2018-dual-audio-hindi-480p-720p-1080p/">
+                    <img src="https://m.media-amazon.com/images/I/91LPOMer4jL._AC_UF894,1000_QL80_.jpg" alt="Movie 3">
+                    <h2>Venom</h2>
+                </a>
+            </article>
+            <!-- Add more movie articles as needed -->
+        </section>
+    </main>
+	 <script src="movie.js"></script>
+</body>
+</html>
