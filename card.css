@@ -1,0 +1,123 @@
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background-size: 100%;
+	background-color: #2b2b2b;
+}
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 250px 20px;
+  background: black;
+  color:#e7e7e7;
+  grid-template-areas: "image" "text" "stats";
+
+  border-radius: 18px;
+  background: black;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: justify;
+  cursor: pointer;
+  margin: 30px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.rgb::after {
+	content:"";
+	background: linear-gradient(45deg,
+	#ff0000 0%,
+	#ff9a00 10%,
+	#d0de21 20%,
+	#4fdc4a 30%,
+	#3fdad8 40%,
+	#2fc9e2 50%,
+	#1c7fee 60%,
+	#5f15f2 70%,
+	#ba0cf8 80%,
+	#fb07d9 90%,
+	#ff0000 100% )
+	repeat 0% 0% / 300% 100%;
+	position: absolute;
+	inset: -3px;
+	animation: rgb 6s linear infinite;
+	border-radius: 16px;
+	filter: blur(8px);
+	transform: translateZ(-1px);
+}
+@keyframes rgb {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
+}
+.js-tilt-glare {
+	border-radius: 18px;
+}
+.card-image {
+  grid-area: image;
+}
+.card-text {
+  grid-area: text;
+  margin: 25px;
+  transform: translateZ(30px);
+}
+.card-stats {
+  grid-area: stats; 
+}
+.card-image {
+  grid-area: image;
+  background: url("venom.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size:13px;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: white;
+  padding:10px;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.card {
+
+...
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
