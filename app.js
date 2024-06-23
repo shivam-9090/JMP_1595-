@@ -44,7 +44,7 @@ app.use(express.static('public'));
 
 // Route for serving the login form
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + '/public/Login.html');
 });
 
 // Route for handling user registration
