@@ -9,25 +9,54 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="http://localhost:5000/save_login" method="post">
+        <form id="loginForm">
             <h1>LOGIN</h1>
             <div class="input-box">
-                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" id="username" name="username" placeholder="Username" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="remember-forgot">
                 <label><input type="checkbox">Remember me</label>
                 <a href="#">Forget password</a>
             </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" onclick="saveLogin()">Login</button>
             <div class="register-link">
                 <p>Don't have an account? <a href="#">Register</a></p>
             </div>
         </form>
     </div>
+
+    <script>
+        function saveLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return;
+            }
+
+            fetch('http://localhost:8000/save_login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                document.getElementById('loginForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to save login data.');
+            });
+        }
+    </script>
 </body>
 </html>
