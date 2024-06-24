@@ -1,62 +1,132 @@
+<!-- public/login.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="stylew.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .container {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+    }
+    input[type="text"], input[type="password"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: calc(100% - 20px);
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    p.error {
+      color: red;
+    }
+  </style>
 </head>
 <body>
-    <div class="wrapper">
-        <form id="loginForm">
-            <h1>LOGIN</h1>
-            <div class="input-box">
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox">Remember me</label>
-                <a href="#">Forget password</a>
-            </div>
-            <button type="button" class="btn" onclick="saveLogin()">Login</button>
-            <div class="register-link">
-                <p>Don't have an account? <a href="#">Register</a></p>
-            </div>
-        </form>
-    </div>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+    
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    
+      <input type="submit" value="Login">
+    </form>
+    <p id="error" style="color: red;"></p>
 
-    <script>
-        function saveLogin() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+    <h2>Register</h2>
+    <form id="registerForm">
+      <label for="regUsername">Username</label>
+      <input type="text" id="regUsername" name="username" required>
+    
+      <label for="regPassword">Password</label>
+      <input type="password" id="regPassword" name="password" required>
+    
+      <input type="submit" value="Register">
+    </form>
+    <p id="regError" style="color: red;"></p>
+  </div>
 
-            if (!username || !password) {
-                alert("Please enter both username and password.");
-                return;
-            }
+  <script>
+    // Handle login form submission
+    document.getElementById("loginForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-            fetch('http://localhost:8000/save_login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password })
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data);
-                document.getElementById('loginForm').reset();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Failed to save login data.');
-            });
+      try {
+        const response = await fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.text();
+        if (response.ok) {
+          alert(data); // Replace with redirection or other actions
+        } else {
+          document.getElementById("error").textContent = data;
         }
-    </script>
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+
+    // Handle registration form submission
+    document.getElementById("registerForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const username = document.getElementById("regUsername").value;
+      const password = document.getElementById("regPassword").value;
+
+      try {
+        const response = await fetch('/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.text();
+        if (response.ok) {
+          alert(data); // Replace with redirection or other actions
+        } else {
+          document.getElementById("regError").textContent = data;
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  </script>
 </body>
 </html>
